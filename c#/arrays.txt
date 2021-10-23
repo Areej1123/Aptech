@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp15
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //****************Single-dimensional Arrays
+            /*
+            //int[] arr = new int[5];
+            //arr[0] = 200;
+            //arr[1] = 500;
+            //arr[2] = 900;
+            //arr[3] = 250;
+            //arr[4] = 850;
+            int[] arr = { 21,54,87,852,14,63,54}; // this is Array initializer]]
+            int res = arr[1] + arr[4];
+            Console.WriteLine(res);
+            */
+            /*
+            string[] Names = new string[15];
+
+            for (int i = 0; i < Names.Length; i++)
+            {
+                Console.Write("Enter Name : ");
+                Names[i] = Console.ReadLine();
+            }
+
+            Console.WriteLine("\n\n---------------------------------\n\n");
+            //for (int i = 0; i < Names.Length; i++)
+            //{
+            //    Console.WriteLine($"Student {i+1} :"+Names[i]);
+            //}
+
+            foreach (var item in Names)
+            {
+                Console.WriteLine( item);
+            }
+            */
+
+
+
+            //*********************Multi-dimensional Arrays
+
+
+            string[,] Students = new string[5, 3];
+
+            Students[0, 0] = "Ali"; Students[0, 1] = "0320-98631254"; Students[0, 2] = "Ali@gmail.com";
+            Students[1, 0] = "Asad"; Students[1, 1] = "0320-98631254"; Students[1, 2] = "Asad@gmail.com";
+
+            //Console.WriteLine(Students[0, 0]);
+            //Console.WriteLine(Students[0, 1]);
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Console.WriteLine(Students[i,j]);
+            //    }
+            //    Console.WriteLine();
+            //}
+            int i = 0;
+
+            foreach (var item in Students)
+            {
+                Console.WriteLine(item);
+                i++;
+                if (i%3==0)
+                {
+                    Console.WriteLine("\n-----------------------\n");
+                }
+
+            }
+
+
+        }
+    }
+}
