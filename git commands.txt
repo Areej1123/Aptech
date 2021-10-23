@@ -1,0 +1,8 @@
+git init
+git config --global user.name "Muhammad Ali"
+git config --global user.email "Muhammad.Ali@gmail.com"
+git remote add origin
+
+git add .
+git commit -m "initial commit"
+git push origin master
