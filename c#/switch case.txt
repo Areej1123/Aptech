@@ -1,0 +1,42 @@
+ //****************************************************************
+
+            //Console.Write("Enter any Vowel : ");
+            //string vowel = Console.ReadLine();
+            //Console.Write("Enter Book number : ");
+            //string book = Console.ReadLine();
+
+            //switch (vowel)
+            //{
+            //    case "a":
+            //    case "e":
+            //    case "i":
+            //    case "o":
+            //    case "u":
+            //        Console.WriteLine("this is vowel");
+            //        break;
+
+            //    case "CPISM":
+            //        switch (book)
+            //        {
+            //            case "1":
+            //                Console.WriteLine("MS-Office");
+            //                break;
+            //            case "2":
+            //                Console.WriteLine("HTML");
+            //                break;
+            //            case "3":
+            //                Console.WriteLine("Bootstrap");
+            //                break;
+            //        }
+            //        break;
+            //    case "2":
+            //        Console.WriteLine("Monday");
+            //        break;
+            //    case "3":
+            //        Console.WriteLine("Tuesday");
+            //        break;
+            //    default:
+            //        Console.WriteLine("this is consonant");
+            //        break;
+
+            //}

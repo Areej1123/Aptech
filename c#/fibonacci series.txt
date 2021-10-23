@@ -1,0 +1,9 @@
+ int slast = 0;
+            int last = 1;
+            for (int i = 0; i < 10; i++)
+            {
+                int newNum = slast + last;
+                Console.WriteLine(newNum);
+                slast = last;
+                last = newNum;
+            }

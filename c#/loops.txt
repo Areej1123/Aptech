@@ -1,0 +1,123 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //int lastVal = 1;
+            //int secondLastVal = 0;
+            //Console.Write(secondLastVal + "\t");
+            //Console.Write(lastVal + "\t");
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    int newValue = lastVal + secondLastVal;
+            //    Console.Write(newValue+"\t");
+            //    secondLastVal = lastVal;
+            //    lastVal = newValue;
+            //}
+
+            //***************************
+            //Console.Write("Table : ");
+            //int table = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("From : ");
+            //int from = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("To : ");
+            //int to = Convert.ToInt32(Console.ReadLine());
+
+            //for (int i = from; i <= to; i++)
+            //{
+            //    Console.WriteLine(table+" X "+i+" = "+(i*table));
+            //}
+
+
+
+            //************* Factorial****************
+
+            // Console.Write("Enter Any Number : ");
+            // int n = Convert.ToInt32(Console.ReadLine());
+            // int res = 1;
+            // for (int i = 1; i <= n; i++)
+            // {
+            //     res *= i;
+            // }
+            //// Console.WriteLine("Factorial of " + n + " = " + res);
+            // Console.WriteLine($"Factorial of  {n} = {res}");
+
+
+
+            //new Thread(delegate ()
+            //{
+            //    for (int i = 0; ; i++)
+            //    {
+            //        Thread.Sleep(200);
+            //        Console.WriteLine(i);
+            //    }
+            //}).Start();
+
+
+            // missing portions in loop
+            //int i;
+            //for ( i=1;i<=10 ;i++);
+            //Console.WriteLine(i);
+
+
+            // while
+            //int i = 0;
+            //while ( i<=10)
+            //{
+
+            //    Console.WriteLine(i);
+            //    i++;
+            //}
+
+
+            //do while loop
+
+            //bool isLoginSuccessfully = false;
+            //do
+            //{
+
+            //    Console.Write("Enter your username : ");
+            //    string username = Console.ReadLine();
+            //    Console.Write("Enter your Password : ");
+            //    string password = Console.ReadLine();
+
+            //    if (username == "admin" && password == "123")
+            //    {
+            //        isLoginSuccessfully = true;
+            //        Console.WriteLine("\nLogin Successfully...");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("\n-----------Login failed ..-----------\n\n");
+            //    }
+
+            //}
+            //while (!isLoginSuccessfully);
+
+
+            // foreach loop
+
+            string[] Names = {"Ateeb ilyas","Muzammil sadiq","Abdul basit","Anus","Ameer","Ameen" };
+            //for (int i = 0; i < Names.Length; i++)
+            //{
+            //    Console.WriteLine(Names[i]);
+            //}
+            
+            foreach (var name in Names)
+            {
+                Console.WriteLine(name+" "+( name.Replace(" ","").Length%2==0?"Even":"Odd"));
+            }
+
+        }
+    }
+}
