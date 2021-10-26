@@ -48,10 +48,36 @@ namespace ConsoleApp15
             //*********************Multi-dimensional Arrays
 
 
+            /*
             string[,] Students = new string[5, 3];
 
-            Students[0, 0] = "Ali"; Students[0, 1] = "0320-98631254"; Students[0, 2] = "Ali@gmail.com";
-            Students[1, 0] = "Asad"; Students[1, 1] = "0320-98631254"; Students[1, 2] = "Asad@gmail.com";
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"\n-------- Student {i+1} ----------\n");
+                for (int j = 0; j < 3; j++)
+                {
+                    if (j == 0)
+                    {
+                        Console.Write("Enter Name : ");
+                    }
+                    if (j == 1)
+                    {
+                        Console.Write("Enter Phone : ");
+                    }
+                    if (j == 2)
+                    {
+                        Console.Write("Enter Email : ");
+                    }
+                    Students[i, j] = Console.ReadLine();
+                }
+                
+            }
+            Console.WriteLine("\n------------------------------------\n");
+            Console.WriteLine("--------- Students Record----------\n");
+            Console.WriteLine("------------------------------------\n");
+
+            //Students[0, 0] = "Ali"; Students[0, 1] = "0320-98631254"; Students[0, 2] = "Ali@gmail.com";
+            //Students[1, 0] = "Asad"; Students[1, 1] = "0320-98631254"; Students[1, 2] = "Asad@gmail.com";
 
             //Console.WriteLine(Students[0, 0]);
             //Console.WriteLine(Students[0, 1]);
@@ -64,19 +90,37 @@ namespace ConsoleApp15
             //    }
             //    Console.WriteLine();
             //}
-            int i = 0;
+            int row = 0;
 
             foreach (var item in Students)
             {
                 Console.WriteLine(item);
-                i++;
-                if (i%3==0)
+                row++;
+                if (row % 3 == 0)
                 {
                     Console.WriteLine("\n-----------------------\n");
                 }
 
-            }
+            }*/
 
+            //*********************Multi-dimensional (Jagged) Array
+
+
+            string[][] Students = new string[3][];
+
+            Students[0] = new string[5] { "Mudassir", "HTML", "CSS", "JavaScript", "C#" };
+            Students[1] = new string[3] { "Mustafa", "SQL", "PHP"};
+            Students[2] = new string[6] { "Usman", "HTML", "CSS", "JavaScript", "C#","Android" };
+
+
+            foreach (var arr in Students)
+            {
+                foreach (var item in arr)
+                {
+                    Console.WriteLine(item);
+                }
+                Console.WriteLine("\n-------------------------\n");
+            }
 
         }
     }
