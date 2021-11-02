@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // DataType, instance variable, assignment Operater, new keyword use to create new memory in RAM, Constructor
+            Student std = new Student();
+            std.id = 101;
+            std.Name = "Ali";
+            std.Phone = "0320-3265981";
+            std.Email = "ali@gmail.com";
+            std.Batch = "PR202010B1";
+            std.Subjects = new string[5] { "CSS", "JAVA", "SWIFT", "HTML", "PHP" };
+
+
+
+            Student std2 = new Student();
+            std2.id = 102;
+            std2.Name = "Asad Ali";
+            std2.Phone = "0333-8877541";
+            std2.Email = "Asad@gmail.com";
+            std2.Batch = "PR202010B1";
+            std2.Subjects = new string[5] { "AngularJs","C#","MVC","SQL","Azure"};
+
+            std.display();
+            std2.display();
+        }
+    }
+
+
+    class Student
+    {
+
+        public int id;
+        public string Name;
+        public string Phone;
+        public string Email;
+        public string Batch;
+        public string[] Subjects=new string[5];
+
+        public void display()
+        {
+            Console.WriteLine("\n--------------------\n");
+            Console.WriteLine("Id : "+id);
+            Console.WriteLine("Name : "+Name);
+            Console.WriteLine("Phone : "+Phone);
+            Console.WriteLine("Email : "+Email);
+            Console.WriteLine("Batch : "+Batch);
+            Console.WriteLine("Subjects:");
+            foreach (var subject in Subjects)
+            {
+                Console.WriteLine("\t:\t"+subject);
+            }
+            Console.WriteLine("\n--------------------\n");
+        }
+    }
+
+
+}
+
