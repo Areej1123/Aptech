@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp20
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //compile time polymorphism (method overloading)
+            Calculator calc = new Calculator();
+            calc.Add(10, 20,50,100);
+        }
+    }
+
+    public class Calculator
+    {
+
+        public void Add(float a, int b)
+        {
+            Console.WriteLine(a + b);
+        }
+        public void Add( int b,float a)
+        {
+            Console.WriteLine(a + b);
+        }
+        public  void Add(int a, int b)
+        {
+            Console.WriteLine(a+b);
+        }
+        public  void Add(int a, int b,int c)
+        {
+            Console.WriteLine(a+b+c);
+        }
+        public  void Add(int a, int b,int c,int d)
+        {
+            Console.WriteLine(a+b+c+d);
+        }
+
+    }
+
+
+}

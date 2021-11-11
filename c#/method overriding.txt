@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp20
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //runtime polymorphism (method overriding)
+            Student std = new Student();
+            std.DisplayInfo();
+        }
+    }
+    public class Person
+    {
+        public void Display()
+        {
+            Console.WriteLine("Person information.");
+        }
+    }
+    public class Student:Person
+    {
+        public  void Display()
+        {
+            Console.WriteLine("Student information.");
+        }
+        public void DisplayInfo()
+        {
+         base. Display();
+        }
+    }
+}

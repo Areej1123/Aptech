@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp20
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Product product = new Product();
+            product.AddProduct("Marker", "Stationary",50);
+
+            //Named Argument
+            product.UpdateProduct(price: 80,Name: "Marker");
+
+        }
+    }
+
+    public class Product
+    {
+        //optional parameter
+        public void AddProduct(string Name,string Category,double price=0)
+        {
+            Console.WriteLine(Name);
+            Console.WriteLine(Category);
+            Console.WriteLine(price);
+
+        }
+        //Named parameter
+        public void UpdateProduct(string Name, double price )
+        {
+            Console.WriteLine(Name);
+            Console.WriteLine(price);
+
+        }
+    }
+
+   
+}
