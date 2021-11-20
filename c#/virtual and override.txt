@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        //Virtual and override
+       
+        static void Main(string[] args)
+        {
+            Person person = new Student();
+            person.display();
+        }
+    }
+
+
+    public class Person
+    {
+        public virtual  void display()
+        {
+            Console.WriteLine("Person method calling.");
+        }
+    }
+    public class Student:Person
+    {
+        public override void display()
+        {
+            Console.WriteLine("Student method calling.");
+        }
+
+    }
+
+
+}

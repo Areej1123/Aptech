@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IDataBase db = new DataBase();
+            person obj = new person();
+        }
+    }
+
+    public interface IDataBase
+    {
+        int InsertRecord(String Name, String Phone , String Email);
+        bool UpdateRecord(int id,String Name, String Phone , String Email);
+        bool DeleteRecord(int id);
+        List<string> GetAllRecord();
+    }
+    public class DataBase : IDataBase
+    {
+        public bool DeleteRecord(int id)
+        {
+            // delete record
+            return true;
+        }
+
+        public List<string> GetAllRecord()
+        {
+            // fetch students
+            List<string> lst = new List<string>();
+            return lst;
+        }
+
+        public int InsertRecord(string Name, string Phone, string Email)
+        {
+            // indert student
+            return 1;
+        }
+
+        public bool UpdateRecord(int id, string Name, string Phone, string Email)
+        {
+            // update record
+            return true;
+        }
+        public string getNameById(int id)
+        {
+            return "ali";
+        }
+
+    }
+
+
+   public abstract class person
+    {
+        public void displayInfo()
+        {
+
+        }
+        public abstract  void success(Stream data);
+    }
+    public class User : person
+    {
+       
+
+        public override void success(Stream data)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+
+
+
+
+
+
+
+}

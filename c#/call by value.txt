@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // call by value
+
+            int a =10;
+            int b=20 ;
+            int c=30 ;
+
+            M( a,  b,  c);
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+
+
+        }
+
+        public static void M( int x,  int y,  int z)
+        {
+            x = 100;
+            y = 200;
+            z = 300;
+        }
+    }
+}

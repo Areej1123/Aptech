@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        // Constructor and destructor
+        static void Main(string[] args)
+        {
+            Product product = new Product("102","Mouse","250");
+            Console.WriteLine(product.Id);
+            Console.WriteLine(product.Name);
+            Console.WriteLine(product.Price);
+        }
+    }
+    public class Product
+    {
+       public string Id, Name, Price;
+
+        public Product()
+        {
+            Console.WriteLine("Constructor calling...");
+        }
+        public Product(string Id,string Name,string Price)
+        {
+            this.Id = Id;
+            this.Name = Name;
+            this.Price = Price;
+        }
+        ~Product()
+        {
+            Console.WriteLine("Destructor is calling..");
+        }
+
+    }
+
+
+}

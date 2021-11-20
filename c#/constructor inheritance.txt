@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        //constructor inheritance
+       
+        static void Main(string[] args)
+        {
+            Student student = new Student(200);
+        }
+    }
+    public class User
+    {
+        public int Id { get; set; }
+        public User(int id)
+        {
+            Id = id;
+        }
+    }
+
+    public class Person: User
+    {
+        public Person(string name,int id):base(id)
+        {
+            Name = Name;
+        }
+        public string Name { get; set; }
+    }
+    public class Student:Person
+    {
+        public Student(int id):base("ali",id)
+        {
+
+        }
+        public string Batch { get; set; }
+        public string Course { get; set; }
+        
+    }
+
+
+}

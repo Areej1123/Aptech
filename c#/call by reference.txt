@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // call by value
+
+            int a = 10;
+            int b = 20;
+            int c = 30;
+
+            M(ref a,ref b,ref c);
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+
+
+        }
+
+        public static void M(ref int x,ref int y,ref int z)
+        {
+            x = 100;
+            y = 200;
+            z = 300;
+        }
+    }
+}
+///////////////////////////////////////////
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // call by reference using out keyword
+
+            int a ;
+            int b ;
+            int c ;
+
+            M(out a, out b, out c);
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+
+
+        }
+
+        public static void M(out int x, out int y, out int z)
+        {
+            x = 100;
+            y = 200;
+            z = 300;
+        }
+    }
+}
