@@ -1,0 +1,127 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //The is and as Operators in Interfaces
+            Cat obj = new Cat();
+            Dog dog = new Dog();
+            Tiger tiger = new Tiger();
+            Hen hen = new Hen();
+
+            if (obj is Cat)
+                Console.WriteLine("Yes Cat is Animal");
+            else
+                Console.WriteLine("No Cat is not an Animal");
+
+            if (dog is Animal)
+                Console.WriteLine("Yes Dog is Animal");
+            else
+                Console.WriteLine("No Dog is not an Animal");
+
+            if (tiger is Animal)
+                Console.WriteLine("Yes tiger is Animal");
+            else
+                Console.WriteLine("No tiger is not an Animal");
+
+            if (hen is Animal)
+                Console.WriteLine("Yes Hen is Animal");
+            else
+                Console.WriteLine("No Hen is not an Animal");
+
+            Animal cat = (Animal)obj ;
+            Animal cat =obj as Animal;
+
+
+
+        }
+
+
+    }
+
+    public interface IDataBase
+    {
+        int InsertRecord(String Name, String Phone , String Email);
+        bool UpdateRecord(int id,String Name, String Phone , String Email);
+        bool DeleteRecord(int id);
+        List<string> GetAllRecord();
+    }
+    public class DataBase : IDataBase
+    {
+        public bool DeleteRecord(int id)
+        {
+            // delete record
+            return true;
+        }
+
+        public List<string> GetAllRecord()
+        {
+            // fetch students
+            List<string> lst = new List<string>();
+            return lst;
+        }
+
+        public int InsertRecord(string Name, string Phone, string Email)
+        {
+            // indert student
+            return 1;
+        }
+
+        public bool UpdateRecord(int id, string Name, string Phone, string Email)
+        {
+            // update record
+            return true;
+        }
+        public string getNameById(int id)
+        {
+            return "ali";
+        }
+
+    }
+
+
+   public abstract class person
+    {
+        public void displayInfo()
+        {
+
+        }
+        public abstract  void success(Stream data);
+    }
+    public class User : person
+    {
+       
+
+        public override void success(Stream data)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+
+
+    class Animal
+    {
+    }
+    class Dog : Animal
+    { }
+    class Cat : Animal
+    { }
+    class Tiger : Animal
+    {
+    }
+    class Hen 
+    {
+
+    }
+
+}
