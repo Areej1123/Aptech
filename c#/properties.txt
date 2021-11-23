@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student obj = new Student();
+            //obj.setName("malik");
+            //Console.WriteLine(obj.getName());
+
+            obj.Email = "ali@gmail.com";
+            Console.WriteLine(obj.Email);
+
+            obj.Name = "ali";
+            Console.WriteLine(obj.Name);
+
+        }
+    }
+
+    class Student
+    {
+        //  getter setter using functions
+        string _name = "ali";
+        public string getName()
+        {
+            return _name;
+        }
+        public void setName(string name)
+        {
+            _name = name;
+        }
+
+        // getter setter using property
+        string _email;
+        public string Email
+        {
+            get
+            {
+                return _email;
+            }
+            set
+            {
+                _email = value;
+            }
+        }
+
+        // Auto implemented property
+        public string Name { get; set; }
+
+
+    }
+
+
+}
