@@ -1,0 +1,6 @@
+public void M()
+        {
+            Qualified Naming
+            System.Collections.Generic. Liststring lst;
+           System.Console.WriteLine(HELLO);
+        }
