@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp24
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Student obj = new Student();
+            obj.setName("");
+
+            int a = 10;
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            try
+            {
+
+
+                String[] arr = new string[5];
+
+                Console.WriteLine(arr[4]);
+
+                int res = a / b;
+                Console.WriteLine("Result : " + res);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //catch (DivideByZeroException ex)
+            //{
+            //    throw;
+
+            //}
+            //catch (NullReferenceException ex)
+            //{
+            //    Console.WriteLine();
+            //}
+            //catch (IndexOutOfRangeException ex)
+            //{
+            //    Console.WriteLine();
+            //}
+            finally
+            {
+
+            }
+
+            Console.WriteLine("completed...");
+
+
+        }
+
+
+        class Student
+        {
+            string Name;
+            public void setName(string name)
+            {
+                if (name == "" || name == null)
+                {
+                    throw new Exception("Name cannot be null or empty.");
+                }
+                Name = name;
+            }
+
+        }
+    }
+}
