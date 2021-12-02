@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp25
+{
+
+
+    class Program
+    {
+        public delegate void Calculator(int a, int b,string op);
+        public static event Calculator calc;
+
+
+        public delegate void OnShakeDelegate(int ShakeCount);
+        public static event OnShakeDelegate OnShakeEventHandler;
+        static void Main(string[] args)
+        {
+            OnShakeEventHandler += Program_OnShakeEventHandler;
+        }
+
+        private static void Program_OnShakeEventHandler(int ShakeCount)
+        {
+            refresh();
+        }
+
+        private static void refresh()
+        {
+        
+        }
+    }
+}

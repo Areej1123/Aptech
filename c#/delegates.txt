@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp25
+{
+
+
+    class Program
+    {
+        public delegate void Calculator(int a, int b);
+        static void Main(string[] args)
+        {
+
+            //Calculator calc = new Calculator(add);
+            //int res = calc(10, 50);
+            //Console.WriteLine(res);
+
+
+
+            //-----------------Multiple Delegates
+            //Calculator calc_add = new Calculator(add);
+            //Calculator calc_sub = new Calculator(sub);
+            //int res1 = calc_add(10, 50);
+            //int res2 = calc_sub(100, 50);
+            //Console.WriteLine(res1);
+            //Console.WriteLine(res2);
+
+            //-------------Multicast Delegate
+            Calculator calc = new Calculator(add);
+            calc += sub;
+            calc += div;
+            calc(50,10);
+
+        }
+
+        private static void div(int a, int b)
+        {
+            Console.WriteLine(a / b); 
+        }
+
+        private static void sub(int a, int b)
+        {
+            Console.WriteLine(a - b);
+        }
+
+        public static void add(int a, int b)
+        {
+            Console.WriteLine(a + b);
+        }
+
+    }
+}
