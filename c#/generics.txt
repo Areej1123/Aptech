@@ -1,0 +1,82 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp27
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            MyList<int> lst = new MyList<int>(4);
+            lst.add(10);
+            lst.add(100);
+            lst.add(20);
+            lst.add(400);
+            foreach (var v in lst.arr)
+            {
+                Console.WriteLine(v);
+            }
+            Console.WriteLine();
+            Console.WriteLine("------------------------");
+            Console.WriteLine();
+
+            MyList<string> lst2 = new MyList<string>(20);
+            lst2.add("ali");
+            lst2.add("asad");
+            lst2.add("hamza");
+            lst2.add("muzammil");
+            lst2.add("anaus");
+            lst2.add("Basit");
+            lst2.add("raffay");
+            lst2.add("Areej");
+            lst2.add("Ameer");
+            lst2.add("Ameen");
+            lst2.add("Mudassir");
+            lst2.add("Mustafa");
+            lst2.add("Saad");
+            lst2.add("Talal");
+            lst2.add("Noman");
+            lst2.add("Zeeshan");
+            lst2.add("Usman");
+            lst2.add("Owais");
+            lst2.add("Abdul rouf");
+
+            foreach (var name in lst2.arr)
+            {
+                Console.WriteLine(name);
+            }
+
+
+
+            //MyList<Student> students = new MyList<Student>();
+            //students.add(new Student());
+
+        }
+    }
+    class MyList<t>
+    {
+
+
+        public t[] arr;
+        int index = 0;
+        public MyList(int length)
+        {
+            arr = new t[length];
+        }
+        
+        public void add(t item)
+        {
+            arr[index++] = item;
+        }
+
+    }
+
+    class Student
+    { }
+}
