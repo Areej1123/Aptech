@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp30
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            Student obj = new Student();
+               
+        }
+
+
+    }
+    //Partial classes
+
+   partial class Student
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+    }
+    partial class Student
+    {
+        public string Phone { get; set; }
+        public void play()
+        {
+            Console.WriteLine(Id);
+            Console.WriteLine(Name);
+
+        }
+    }
+
+}

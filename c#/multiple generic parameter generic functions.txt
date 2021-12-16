@@ -1,0 +1,53 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp27
+{
+    public delegate r Calculator<in p,out r >(p a);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MyList<float> lst3 = new MyList<float>(4);
+
+            lst3.AddItem<bool>(true);
+            lst3.AddItem<string>("ali");
+            lst3.AddItem<double>(5253.2);
+
+          //Calculator<int, string> calc = new Calculator<int, string>(getLength);
+            
+        }
+
+
+        private static int getLength(string a)
+        {
+            return a.Length;
+        }
+    }
+ 
+    class MyList<t> 
+    {
+        public t[] arr;
+        int index = 0;
+        public MyList(int length)
+        {
+            arr = new t[length];
+        }
+        
+        public void add(t item)
+        {
+            arr[index++] = item;
+        }
+
+        public void AddItem<pt>(pt item)
+        {
+            
+        }
+
+    }
+    
+}

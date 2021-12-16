@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp30
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            // Anonymous Types
+
+            var obj = new {name="ali",phone="0320-986321",email="ali@gmail.com",RollNumber=10141 };
+
+            Console.WriteLine(obj.RollNumber);
+
+        }
+
+
+    }
+   
+}
