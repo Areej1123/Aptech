@@ -1,0 +1,10 @@
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\bin\Debug\crud_using_ado.exe.config
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\bin\Debug\crud_using_ado.exe
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\bin\Debug\crud_using_ado.pdb
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\obj\Debug\crud_using_ado.csprojAssemblyReference.cache
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\obj\Debug\crud_using_ado.Form1.resources
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\obj\Debug\crud_using_ado.Properties.Resources.resources
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\obj\Debug\crud_using_ado.csproj.GenerateResource.cache
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\obj\Debug\crud_using_ado.csproj.CoreCompileInputs.cache
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\obj\Debug\crud_using_ado.exe
+C:\Users\INT\source\repos\crud_using_ado\crud_using_ado\obj\Debug\crud_using_ado.pdb
