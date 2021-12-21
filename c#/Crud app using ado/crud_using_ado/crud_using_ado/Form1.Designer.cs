@@ -55,6 +55,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_students)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,6 +151,7 @@
             this.CB_country.Name = "CB_country";
             this.CB_country.Size = new System.Drawing.Size(138, 21);
             this.CB_country.TabIndex = 10;
+            this.CB_country.SelectedIndexChanged += new System.EventHandler(this.CB_country_SelectedIndexChanged);
             // 
             // CB_City
             // 
@@ -264,6 +267,7 @@
             this.button_delete.TabIndex = 22;
             this.button_delete.Text = "Delete";
             this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // dataGridView_students
             // 
@@ -273,8 +277,9 @@
             this.dataGridView_students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_students.Location = new System.Drawing.Point(245, 78);
             this.dataGridView_students.Name = "dataGridView_students";
-            this.dataGridView_students.Size = new System.Drawing.Size(489, 458);
+            this.dataGridView_students.Size = new System.Drawing.Size(543, 526);
             this.dataGridView_students.TabIndex = 23;
+            this.dataGridView_students.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_students_CellClick);
             // 
             // txtSearch
             // 
@@ -282,6 +287,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(244, 20);
             this.txtSearch.TabIndex = 24;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // txtAge
             // 
@@ -299,11 +305,30 @@
             this.label10.TabIndex = 25;
             this.label10.Text = "Age";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 55);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Student Id";
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(82, 55);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(0, 13);
+            this.lbl_id.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 548);
+            this.ClientSize = new System.Drawing.Size(800, 616);
+            this.Controls.Add(this.lbl_id);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtSearch);
@@ -368,6 +393,8 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_id;
     }
 }
 
