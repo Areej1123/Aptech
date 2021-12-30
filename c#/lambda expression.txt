@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp37
+{
+    class Program
+    {
+       
+        static void Main(string[] args)
+        {
+            List<int> marks = new List<int>{ 45,65,32,54,98,87,54,100,95,85,45,25,35,65,15,75,62,3,2,14,52,78,45,12,65,32,98,9,13,46 };
+
+            int sum = marks.Sum();
+            Console.WriteLine(sum);
+
+            int total = marks.Count();
+            Console.WriteLine(total);
+
+            int totalEligibleStudents = marks.Count(a => a >= 40);
+            Console.WriteLine(totalEligibleStudents);
+
+            if (marks.Contains(100))
+            {
+                Console.WriteLine("Yes 100 marks is exist..");
+            }
+            else
+            {
+                Console.WriteLine("NO 100 marks is not exist in the list..");
+            }
+
+            int sum2 = marks.Where( a=> a>=70 ).Sum();
+            Console.WriteLine(sum2);
+
+
+            //Console.WriteLine("\n-----------------------------\n");
+
+            //var orderdListOfMarks = marks.OrderBy(a=>a);
+            //foreach (var item in orderdListOfMarks)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            Console.WriteLine("\n-----------------------------\n");
+            foreach (var item in marks.Where(a=> a>30 && a<40))
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+
+ 
+
+      
+    }
+
+
+
+}
