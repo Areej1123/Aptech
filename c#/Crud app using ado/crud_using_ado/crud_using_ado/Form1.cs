@@ -183,5 +183,57 @@ namespace crud_using_ado
                 MessageBox.Show("Error...");
             }
         }
+
+        private void button_update_Click(object sender, EventArgs e)
+        {
+            // Update record
+            var id = lbl_id.Text;
+            string name = txtName.Text;
+            string phone = txtPhone.Text;
+            string email = txtEmail.Text;
+            int age = Convert.ToInt32(txtAge.Text);
+            string pass = txtPassword.Text;
+            string country = CB_country.SelectedValue + "";
+            string city = CB_City.SelectedValue + "";
+
+            string gender = "Male";
+            if (radioButton_female.Checked) gender = "Female";
+
+            string subjects = "";
+            if (checkBox_html.Checked) subjects = "HTML";
+            if (checkBox_java.Checked) subjects += ",JAVA";
+            if (checkBox_swift.Checked) subjects += ",SWIFT";
+
+            int res = 0;
+            try
+            {
+                con.Open();
+                string query = $"update Student set Name='{name}',Phone='{phone}',Age='{age}',Email='{email}',Password='{pass}',Country='{country}',City='{city}',Gender='{gender}',Subjects='{subjects}' where Id='{id}'";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                res = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            if (res > 0)
+            {
+                MessageBox.Show("record updated successfuly...");
+                txtName.Text = txtPhone.Text = txtEmail.Text = txtAge.Text = txtPassword.Text = "";
+                radioButton_male.Checked = true;
+                checkBox_html.Checked = checkBox_java.Checked = checkBox_swift.Checked = false;
+                fetchStudents();
+            }
+            else
+            {
+                MessageBox.Show("Error...");
+            }
+
+        }
     }
 }
