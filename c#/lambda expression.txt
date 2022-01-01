@@ -11,6 +11,10 @@ namespace ConsoleApp37
        
         static void Main(string[] args)
         {
+            //Lambdas with Standard Query Operators
+            // Lambda expression : Where(a=> a>=40)
+            // Lambda statement : Where(a=>{ return a>=40; })
+
             List<int> marks = new List<int>{ 45,65,32,54,98,87,54,100,95,85,45,25,35,65,15,75,62,3,2,14,52,78,45,12,65,32,98,9,13,46 };
 
             int sum = marks.Sum();
@@ -44,18 +48,13 @@ namespace ConsoleApp37
             //}
 
             Console.WriteLine("\n-----------------------------\n");
-            foreach (var item in marks.Where(a=> a>30 && a<40))
+            foreach (var item in marks.Where(a=> { return a > 30 && a < 40; }))
             {
                 Console.WriteLine(item);
             }
-
+            
         }
-
- 
-
       
     }
-
-
 
 }
