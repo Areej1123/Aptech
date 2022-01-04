@@ -1,0 +1,108 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp39
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Student> lst = new List<Student>();
+            lst.Add(new Student {Id=101,Name="Annus",Age=23,Batch="PR-202001B",Marks=75,Subjects="HTML,C#,Swift" });
+            lst.Add(new Student {Id=102,Name="Abdul",Age=25,Batch="PR-202002B",Marks=80,Subjects= "HTML,Java,Swift" });
+            lst.Add(new Student {Id=103,Name="Muzammil",Age=23,Batch="PR-202003B",Marks=90,Subjects="Java,C#" });
+            lst.Add(new Student {Id=104,Name="Mustafa",Age=26,Batch="PR-202003B",Marks=65,Subjects= "C#,Swift" });
+            lst.Add(new Student {Id=105,Name="Areej",Age=23,Batch="PR-202002B",Marks=55,Subjects="HTML,C#" });
+            lst.Add(new Student {Id=106,Name="Zeeshan",Age=15,Batch="PR-202001B",Marks=45,Subjects="HTML,C#" });
+            lst.Add(new Student {Id=107,Name="Mudassir",Age=23,Batch="PR-202001B",Marks=22,Subjects="C#" });
+            lst.Add(new Student {Id=108,Name="Talal",Age=23,Batch="PR-202001B",Marks=95,Subjects="HTML,C#" });
+            lst.Add(new Student {Id=109,Name="Abdullah",Age=20,Batch="PR-202001B",Marks=23,Subjects="HTML,C#" });
+            lst.Add(new Student {Id=110,Name="Saad",Age=23,Batch="PR-202001B",Marks=35,Subjects="Android" });
+            lst.Add(new Student {Id=111,Name="Owais",Age=21,Batch="PR-202002B",Marks=74,Subjects= "C#,Android,Swift" });
+            lst.Add(new Student {Id=112,Name="Ateeb",Age=19,Batch="PR-202003B",Marks=70,Subjects="HTML,C#" });
+            lst.Add(new Student {Id=113,Name="Bilal",Age=23,Batch="PR-202001B",Marks=85,Subjects= "HTML,Android,C#" });
+            lst.Add(new Student {Id=114,Name="Taha",Age=18,Batch="PR-202002B",Marks=58,Subjects="HTML,C#" });
+            lst.Add(new Student {Id=115,Name="Abdul",Age=23,Batch="PR-202001B",Marks=40,Subjects= "HTML,Android,C#" });
+
+
+            //Console.WriteLine("================================================");
+            //Console.WriteLine("=============Pass Students list=================");
+            //Console.WriteLine("================================================");
+
+            //var lstPassStudents = lst.Where(a => a.Marks >= 40)
+            //    .OrderByDescending(a => a.Marks);
+
+            //foreach (var student in lstPassStudents)
+            //{
+            //    Console.Write(student.Id + "\t");
+            //    Console.Write(student.Batch + "\t");
+            //    Console.Write(student.Age + "\t");
+            //    Console.Write(student.Marks + "\t");
+            //    Console.Write(student.Name + "\t\t");
+            //    Console.Write(student.Subjects + "\n");
+            //}
+            //Console.WriteLine("================================================");
+            //Console.WriteLine("=============Fail Students list=================");
+            //Console.WriteLine("================================================");
+
+            //var lstOfFailStudents = lst.Where(a => a.Marks < 40)
+            //    .OrderByDescending(a => a.Marks);
+
+            //foreach (var student in lstOfFailStudents)
+            //{
+            //    Console.Write(student.Id + "\t");
+            //    Console.Write(student.Batch + "\t");
+            //    Console.Write(student.Age + "\t");
+            //    Console.Write(student.Marks + "\t");
+            //    Console.Write(student.Name + "\t\t");
+            //    Console.Write(student.Subjects + "\n");
+            //}
+            //var lst2 = lst.Where(x => x.Subjects.Contains("C#") && !x.Subjects.Contains("Swift"));
+
+            //foreach (var student in lst2)
+            //{
+            //    Console.Write(student.Id + "\t");
+            //    Console.Write(student.Batch + "\t");
+            //    Console.Write(student.Age + "\t");
+            //    Console.Write(student.Marks + "\t");
+            //    Console.Write(student.Name + "\t\t");
+            //    Console.Write(student.Subjects + "\n");
+            //}
+
+            var lstBatches = lst.GroupBy(x=>x.Batch);
+            foreach (var batch in lstBatches)
+            {
+              
+                Console.WriteLine("================================================");
+                Console.WriteLine($"===================== {batch.Key} ==============");
+                Console.WriteLine("================================================");
+                foreach (var student in batch)
+                {
+                    Console.Write(student.Id + "\t");
+                    Console.Write(student.Batch + "\t");
+                    Console.Write(student.Age + "\t");
+                    Console.Write(student.Marks + "\t");
+                    Console.Write(student.Name + "\t\t");
+                    Console.Write(student.Subjects + "\n");
+                }
+            }
+
+
+        }
+    }
+
+    public class Student
+    {
+        public int Id { get; set; }
+        public string Name{ get; set; }
+        public int Age{ get; set; }
+        public string Batch{ get; set; }
+        public int Marks{ get; set; }
+        public string Subjects{ get; set; }
+    }
+
+}
+ 

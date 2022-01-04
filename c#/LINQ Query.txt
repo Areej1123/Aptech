@@ -27,15 +27,20 @@ namespace ConsoleApp39
             lst.Add(new Student {Id=114,Name="Taha",Age=18,Batch="PR-202002B",Marks=58,Subjects="HTML,C#" });
             lst.Add(new Student {Id=115,Name="Abdul",Age=23,Batch="PR-202001B",Marks=40,Subjects= "HTML,Android,C#" });
 
+            // get max marks from list of students
+            //var maxMarks = lst.Select(x => x.Marks).Max();
+            //Console.WriteLine(maxMarks);
+            //var minAge = lst.Select(x => x.Age).Min();
+            //Console.WriteLine(minAge);
 
-            //Console.WriteLine("================================================");
-            //Console.WriteLine("=============Pass Students list=================");
-            //Console.WriteLine("================================================");
+            //var lst2 = from item in lst
+            //               where item.Marks>=80
+            //               //where item.Subjects=="C#"
+            //               orderby item.Marks descending
+            //           select item;
 
-            //var lstPassStudents = lst.Where(a => a.Marks >= 40)
-            //    .OrderByDescending(a => a.Marks);
 
-            //foreach (var student in lstPassStudents)
+            //foreach (var student in lst2)
             //{
             //    Console.Write(student.Id + "\t");
             //    Console.Write(student.Batch + "\t");
@@ -44,33 +49,27 @@ namespace ConsoleApp39
             //    Console.Write(student.Name + "\t\t");
             //    Console.Write(student.Subjects + "\n");
             //}
-            //Console.WriteLine("================================================");
-            //Console.WriteLine("=============Fail Students list=================");
-            //Console.WriteLine("================================================");
 
-            //var lstOfFailStudents = lst.Where(a => a.Marks < 40)
-            //    .OrderByDescending(a => a.Marks);
+            var lstBatches = from item in lst
+                             group item by item.Batch;
 
-            //foreach (var student in lstOfFailStudents)
-            //{
-            //    Console.Write(student.Id + "\t");
-            //    Console.Write(student.Batch + "\t");
-            //    Console.Write(student.Age + "\t");
-            //    Console.Write(student.Marks + "\t");
-            //    Console.Write(student.Name + "\t\t");
-            //    Console.Write(student.Subjects + "\n");
-            //}
-            var lst2 = lst.Where(x => x.Subjects.Contains("C#") && !x.Subjects.Contains("Swift"));
-
-            foreach (var student in lst2)
+            foreach (var batch in lstBatches)
             {
-                Console.Write(student.Id + "\t");
-                Console.Write(student.Batch + "\t");
-                Console.Write(student.Age + "\t");
-                Console.Write(student.Marks + "\t");
-                Console.Write(student.Name + "\t\t");
-                Console.Write(student.Subjects + "\n");
+
+                Console.WriteLine("================================================");
+                Console.WriteLine($"===================== {batch.Key} ==============");
+                Console.WriteLine("================================================");
+                foreach (var student in batch)
+                {
+                    Console.Write(student.Id + "\t");
+                    Console.Write(student.Batch + "\t");
+                    Console.Write(student.Age + "\t");
+                    Console.Write(student.Marks + "\t");
+                    Console.Write(student.Name + "\t\t");
+                    Console.Write(student.Subjects + "\n");
+                }
             }
+
 
         }
     }
@@ -86,3 +85,4 @@ namespace ConsoleApp39
     }
 
 }
+ 
