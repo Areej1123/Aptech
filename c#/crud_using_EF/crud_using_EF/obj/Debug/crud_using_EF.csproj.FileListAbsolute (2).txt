@@ -1,0 +1,15 @@
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\bin\Debug\crud_using_EF.exe.config
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\bin\Debug\crud_using_EF.exe
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\bin\Debug\crud_using_EF.pdb
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\obj\Debug\crud_using_EF.csprojAssemblyReference.cache
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\obj\Debug\crud_using_EF.Form1.resources
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\obj\Debug\crud_using_EF.Properties.Resources.resources
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\obj\Debug\crud_using_EF.csproj.GenerateResource.cache
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\obj\Debug\crud_using_EF.csproj.CoreCompileInputs.cache
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\obj\Debug\crud_using_EF.exe
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\obj\Debug\crud_using_EF.pdb
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\bin\Debug\EntityFramework.dll
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\bin\Debug\EntityFramework.xml
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\INT\source\repos\crud_using_EF\crud_using_EF\obj\Debug\crud_using_EF.csproj.CopyComplete
