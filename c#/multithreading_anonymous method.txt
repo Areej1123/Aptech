@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp46
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            displayName("Anus");
+            displayName("Basit");
+            displayName("Muzammil");
+            displayName("Raffay");
+            displayName("Ateeb");
+            displayName("Areej");
+            displayName("Ameen");
+            displayName("Ameer");
+            displayName("Noor");
+            displayName("Saad");
+            displayName("Abdullah");
+
+        }
+
+        static void displayName(string name)
+        {
+            Thread th = new Thread(() =>
+            {
+                Thread.Sleep(1000);
+                Console.WriteLine(name);
+            });
+            th.Start();
+        }
+    }
+}
