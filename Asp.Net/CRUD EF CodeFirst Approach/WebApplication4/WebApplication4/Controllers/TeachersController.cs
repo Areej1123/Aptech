@@ -17,7 +17,7 @@ namespace WebApplication4.Controllers
         // GET: Teachers
         public ActionResult Index()
         {
-            var lst = db.Teachers.ToList();
+            var lst = db.Teachers.Include(x=>x.Students).ToList();
             return View(lst);
         }
 

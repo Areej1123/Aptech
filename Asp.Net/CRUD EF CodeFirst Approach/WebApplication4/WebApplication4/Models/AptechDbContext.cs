@@ -9,5 +9,6 @@ namespace WebApplication4.Models
     public class AptechDbContext:DbContext
     {
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }

@@ -16,5 +16,6 @@ namespace WebApplication4.Models
         [Index(IsUnique = true), StringLength(20)]
         public string Email{ get; set; }
         public string Password{ get; set; }
+        public List<Student> Students { get; set; }
     }
 }
