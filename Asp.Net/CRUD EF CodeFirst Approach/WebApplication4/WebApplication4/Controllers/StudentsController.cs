@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -48,8 +49,17 @@ namespace WebApplication4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "StudentId,Name,Phone,Email,Batch,TeacherId")] Student student)
+        public ActionResult Create( Student student, HttpPostedFileBase ImgFile)
         {
+
+            if (ImgFile != null)
+            {
+                string guid = Guid.NewGuid().ToString()+ImgFile.FileName;
+                string path = Path.Combine(Server.MapPath("~/Uploads"), Path.GetFileName(guid));
+                ImgFile.SaveAs(path);
+                student.Image = guid;
+            }
+
             if (ModelState.IsValid)
             {
                 db.Students.Add(student);

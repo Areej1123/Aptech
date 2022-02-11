@@ -99,6 +99,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DashBoardAssets\css\custom_style.css" />
+    <Content Include="DashBoardAssets\css\style.css" />
+    <Content Include="DashBoardAssets\Images\no-image.png" />
+    <Content Include="DashBoardAssets\JS\bundle.js" />
+    <Content Include="DashBoardAssets\JS\vendor.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -159,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202201311647181_InitialCreate.resx">

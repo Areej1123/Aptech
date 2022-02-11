@@ -3,56 +3,69 @@
 @{
     ViewBag.Title = "Details";
 }
+<center>
+    <h2>Details</h2>
 
-<h2>Details</h2>
+    <div>
+        <h4>Student</h4>
 
-<div>
-    <h4>Student</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Teacher.Name)
-        </dt>
+        @if (string.IsNullOrWhiteSpace(Model.Image))
+        {
+            <img src="~/DashBoardAssets/Images/no-image.png" style="height:300px; width:300px;border-radius:50%; box-shadow:5px 5px 5px" />
+        }
+        else
+        {
+            <img src="~/Uploads/@Model.Image" style="height:300px; width:300px;border-radius:50%; box-shadow:5px 5px 5px" />
 
-        <dd>
-            @Html.DisplayFor(model => model.Teacher.Name)
-        </dd>
+        }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+        <hr />
+        <dl class="dl-horizontal">
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Teacher.Name)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Teacher.Name)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Batch)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Batch)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Batch)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Batch)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</center>

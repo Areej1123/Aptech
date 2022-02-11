@@ -16,6 +16,8 @@ namespace WebApplication4.Models
         public string Email{ get; set; }
         public string Batch{ get; set; }
         public int TeacherId { get; set; }
+        public string Image { get; set; }
+
         [ForeignKey("TeacherId")]
         public Teacher Teacher { get; set; }
     }

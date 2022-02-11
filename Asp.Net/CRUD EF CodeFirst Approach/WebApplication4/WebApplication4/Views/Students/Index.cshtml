@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            Image
+        </th>
+        <th>
             Teacher
         </th>
         <th>
@@ -31,6 +34,17 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @if (string.IsNullOrWhiteSpace(item.Image))
+            {
+                <img src="~/DashBoardAssets/Images/no-image.png" style="height:50px; width:50px;border-radius:50px; box-shadow:5px 5px 5px" />
+            }
+            else
+            {
+                <img src="~/Uploads/@item.Image" style="height:50px; width:50px;border-radius:50px; box-shadow:5px 5px 5px" />
+
+            }
+        </td>
         <td>
           @item.Teacher.Name
         </td>
