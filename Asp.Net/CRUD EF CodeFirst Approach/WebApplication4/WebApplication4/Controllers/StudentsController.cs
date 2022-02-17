@@ -11,6 +11,7 @@ using WebApplication4.Models;
 
 namespace WebApplication4.Controllers
 {
+    [Authorize]
     public class StudentsController : Controller
     {
         private AptechDbContext db = new AptechDbContext();
@@ -92,7 +93,7 @@ namespace WebApplication4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "StudentId,Name,Phone,Email,Batch,TeacherId")] Student student)
+        public ActionResult Edit( Student student)
         {
             if (ModelState.IsValid)
             {

@@ -144,5 +144,3 @@ D:\Aptech\Asp.Net\CRUD EF CodeFirst Approach\WebApplication4\WebApplication4\obj
 D:\Aptech\Asp.Net\CRUD EF CodeFirst Approach\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.CopyComplete
 D:\Aptech\Asp.Net\CRUD EF CodeFirst Approach\WebApplication4\WebApplication4\obj\Debug\WebApplication4.dll
 D:\Aptech\Asp.Net\CRUD EF CodeFirst Approach\WebApplication4\WebApplication4\obj\Debug\WebApplication4.pdb
-D:\Aptech\Asp.Net\CRUD EF CodeFirst Approach\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.InitialCreate.resources
-D:\Aptech\Asp.Net\CRUD EF CodeFirst Approach\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.GenerateResource.cache

@@ -104,11 +104,34 @@
     <Content Include="DashBoardAssets\Images\no-image.png" />
     <Content Include="DashBoardAssets\JS\bundle.js" />
     <Content Include="DashBoardAssets\JS\vendor.js" />
+    <Content Include="DashBoardAssets\LoginAssets\css\bootstrap.min.css" />
+    <Content Include="DashBoardAssets\LoginAssets\css\owl.carousel.min.css" />
+    <Content Include="DashBoardAssets\LoginAssets\css\style.css" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\demo-files\demo.css" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\demo-files\demo.js" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\demo.html" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\fonts\icomoon.svg" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\Read Me.txt" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\style.css" />
+    <Content Include="DashBoardAssets\LoginAssets\images\bg_1.jpg" />
+    <Content Include="DashBoardAssets\LoginAssets\js\bootstrap.min.js" />
+    <Content Include="DashBoardAssets\LoginAssets\js\jquery-3.3.1.min.js" />
+    <Content Include="DashBoardAssets\LoginAssets\js\main.js" />
+    <Content Include="DashBoardAssets\LoginAssets\js\owl.carousel.min.js" />
+    <Content Include="DashBoardAssets\LoginAssets\js\popper.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="DashBoardAssets\LoginAssets\css\.DS_Store" />
+    <Content Include="DashBoardAssets\LoginAssets\css\bootstrap.min.css.map" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\.DS_Store" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\fonts\icomoon.eot" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\fonts\icomoon.ttf" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\fonts\icomoon.woff" />
+    <Content Include="DashBoardAssets\LoginAssets\fonts\icomoon\selection.json" />
+    <Content Include="DashBoardAssets\LoginAssets\images\.DS_Store" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -124,16 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202201311647181_InitialCreate.cs" />
-    <Compile Include="Migrations\202201311647181_InitialCreate.Designer.cs">
-      <DependentUpon>202201311647181_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AptechDbContext.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
@@ -155,6 +174,8 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,11 +186,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Uploads\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202201311647181_InitialCreate.resx">
-      <DependentUpon>202201311647181_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

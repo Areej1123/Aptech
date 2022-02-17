@@ -17,9 +17,6 @@
   <system.web>
     <compilation debug="true" targetFramework="4.6.1" />
     <httpRuntime targetFramework="4.6.1" />
-  <authentication mode="Forms">
-	  <forms loginUrl="/Home/Login" ></forms>
-  </authentication>
   </system.web>
   <runtime>
     <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
@@ -34,6 +31,10 @@
       <dependentAssembly>
         <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
         <bindingRedirect oldVersion="1.0.0.0-5.2.4.0" newVersion="5.2.4.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="EntityFramework" culture="neutral" publicKeyToken="b77a5c561934e089" />
+        <codeBase version="6.0.0.0" href="file:///D:/Aptech/Asp.Net/CRUD EF CodeFirst Approach/WebApplication4/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.DLL" />
       </dependentAssembly>
     </assemblyBinding>
   </runtime>
@@ -54,7 +55,6 @@
     </defaultConnectionFactory>
   </entityFramework>
   <connectionStrings>
-    <add name="AptechDbContext" 
-		 connectionString="data source=.;initial catalog=aptechdb2; user id=sa;password=1234" providerName="System.Data.SqlClient" />
+    <add name="AptechDbContext" connectionString="data source=LAB-205-PC-INT;initial catalog=aptechdb; user id=sa;password=1234" providerName="System.Data.SqlClient" />
   </connectionStrings>
 </configuration>
